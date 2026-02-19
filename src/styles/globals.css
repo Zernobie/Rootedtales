@@ -1,0 +1,1312 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ===================================
+   THEME CUSTOM CURSORS
+   =================================== */
+
+/* Forest Theme - Leaf Cursor */
+.theme-forest,
+.theme-forest * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%234f772d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>') 4 4, auto;
+}
+
+.theme-forest button,
+.theme-forest a,
+.theme-forest [role="button"],
+.theme-forest input[type="button"],
+.theme-forest input[type="submit"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%234f772d" stroke="%231a4d2e" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>') 4 4, pointer;
+}
+
+/* Ocean Theme - Seashell Cursor */
+.theme-ocean,
+.theme-ocean * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%233b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 4v16"/><path d="m4.93 4.93 14.14 14.14"/><path d="m19.07 4.93-14.14 14.14"/><path d="M4 12h16"/></svg>') 12 12, auto;
+}
+
+.theme-ocean button,
+.theme-ocean a,
+.theme-ocean [role="button"],
+.theme-ocean input[type="button"],
+.theme-ocean input[type="submit"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2306b6d4" stroke="%231e40af" stroke-width="2"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 4v16"/><path d="m4.93 4.93 14.14 14.14"/><path d="m19.07 4.93-14.14 14.14"/><path d="M4 12h16"/></svg>') 12 12, pointer;
+}
+
+/* Sunset Theme - Acorn Cursor */
+.theme-sunset,
+.theme-sunset * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18c-3.314 0-6-1.343-6-3s2.686-3 6-3 6 1.343 6 3-2.686 3-6 3Z"/><path d="M12 12a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg>') 12 12, auto;
+}
+
+.theme-sunset button,
+.theme-sunset a,
+.theme-sunset [role="button"],
+.theme-sunset input[type="button"],
+.theme-sunset input[type="submit"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23fbbf24" stroke="%23dc2626" stroke-width="2"><path d="M12 3v3"/><path d="M12 18c-3.314 0-6-1.343-6-3s2.686-3 6-3 6 1.343 6 3-2.686 3-6 3Z"/><path d="M12 12a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg>') 12 12, pointer;
+}
+
+/* Night Theme - Moon Cursor */
+.theme-night,
+.theme-night * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%233b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>') 12 12, auto;
+}
+
+.theme-night button,
+.theme-night a,
+.theme-night [role="button"],
+.theme-night input[type="button"],
+.theme-night input[type="submit"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23f59e0b" stroke="%231e3a8a" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>') 12 12, pointer;
+}
+
+/* Input cursor styles for all themes */
+.theme-forest input[type="text"],
+.theme-forest input[type="email"],
+.theme-forest input[type="password"],
+.theme-forest textarea {
+  cursor: text;
+}
+
+.theme-ocean input[type="text"],
+.theme-ocean input[type="email"],
+.theme-ocean input[type="password"],
+.theme-ocean textarea {
+  cursor: text;
+}
+
+.theme-sunset input[type="text"],
+.theme-sunset input[type="email"],
+.theme-sunset input[type="password"],
+.theme-sunset textarea {
+  cursor: text;
+}
+
+.theme-night input[type="text"],
+.theme-night input[type="email"],
+.theme-night input[type="password"],
+.theme-night textarea {
+  cursor: text;
+}
+
+/* ===================================
+   THEME COLOR PALETTES
+   =================================== */
+
+/* Mystical Forest Theme Colors 🌲 */
+.theme-forest {
+  --primary: #064e3b;
+  --primary-foreground: #ffffff;
+  --secondary: #059669;
+  --secondary-foreground: #ffffff;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --muted: #d1fae5;
+  --muted-foreground: #065f46;
+  --border: rgba(6, 78, 59, 0.3);
+  --ring: #059669;
+  --card: #ffffff;
+  --card-foreground: #064e3b;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --background-base: #1a2f1a;
+}
+
+/* Ocean Depth Theme Colors 🌊 */
+.theme-ocean {
+  --primary: #075985;
+  --primary-foreground: #ffffff;
+  --secondary: #0284c7;
+  --secondary-foreground: #ffffff;
+  --accent: #06b6d4;
+  --accent-foreground: #ffffff;
+  --muted: #e0f2fe;
+  --muted-foreground: #0c4a6e;
+  --border: rgba(7, 89, 133, 0.3);
+  --ring: #0284c7;
+  --card: #ffffff;
+  --card-foreground: #075985;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --background-base: #0c4a6e;
+}
+
+/* Sunset Glow Theme Colors 🌅 */
+.theme-sunset {
+  --primary: #9a3412;
+  --primary-foreground: #ffffff;
+  --secondary: #ea580c;
+  --secondary-foreground: #ffffff;
+  --accent: #fb923c;
+  --accent-foreground: #ffffff;
+  --muted: #fed7aa;
+  --muted-foreground: #7c2d12;
+  --border: rgba(154, 52, 18, 0.3);
+  --ring: #ea580c;
+  --card: #ffffff;
+  --card-foreground: #9a3412;
+  --destructive: #991b1b;
+  --destructive-foreground: #ffffff;
+  --background-base: #7c2d12;
+}
+
+/* Starry Night Theme Colors ✨ */
+.theme-night {
+  --primary: #312e81;
+  --primary-foreground: #ffffff;
+  --secondary: #4f46e5;
+  --secondary-foreground: #ffffff;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --muted: #e0e7ff;
+  --muted-foreground: #3730a3;
+  --border: rgba(49, 46, 129, 0.3);
+  --ring: #6366f1;
+  --card: #ffffff;
+  --card-foreground: #312e81;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --background-base: #1e1b4b;
+}
+
+/* ===================================
+   THEME BACKGROUNDS
+   =================================== */
+
+.theme-forest {
+  --theme-bg: 
+    radial-gradient(ellipse at 50% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 70%, rgba(52, 211, 153, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(6, 78, 59, 0.2) 0%, rgba(5, 150, 105, 0.3) 50%, rgba(6, 78, 59, 0.4) 100%);
+  background: url('/figma:asset/88cced24bb39aac025c3d87fa0e7982a19c3acf7.png'), var(--theme-bg);
+  background-color: #1a2f1a;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+}
+
+.theme-ocean {
+  --theme-bg: 
+    radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 20%, rgba(8, 145, 178, 0.12) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(3, 105, 161, 0.15) 0%, rgba(7, 89, 133, 0.20) 50%, rgba(8, 145, 178, 0.25) 100%);
+  background: var(--theme-bg);
+  background-color: #0c4a6e;
+  background-attachment: fixed;
+}
+
+.theme-sunset {
+  --theme-bg: 
+    radial-gradient(ellipse at 50% 80%, rgba(251, 191, 36, 0.20) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(249, 115, 22, 0.18) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(153, 27, 27, 0.25) 0%, rgba(194, 65, 12, 0.30) 35%, rgba(234, 88, 12, 0.25) 70%, rgba(251, 146, 60, 0.20) 100%);
+  background: var(--theme-bg);
+  background-color: #7c2d12;
+  background-attachment: fixed;
+}
+
+.theme-night {
+  --theme-bg: 
+    radial-gradient(ellipse at 50% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 70%, rgba(79, 70, 229, 0.10) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(30, 27, 75, 0.30) 0%, rgba(49, 46, 129, 0.25) 35%, rgba(67, 56, 202, 0.20) 70%, rgba(79, 70, 229, 0.15) 100%);
+  background: var(--theme-bg);
+  background-color: #1e1b4b;
+  background-attachment: fixed;
+}
+
+/* ===================================
+   THEME OVERLAY EFFECTS
+   =================================== */
+
+.theme-forest::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 40%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 20% 60%, rgba(52, 211, 153, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(5, 150, 105, 0.06) 0%, transparent 25%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-ocean::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.12) 0%, transparent 30%),
+    radial-gradient(circle at 60% 60%, rgba(8, 145, 178, 0.1) 0%, transparent 25%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-sunset::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 40% 85%, rgba(251, 191, 36, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 20% 60%, rgba(249, 115, 22, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 80% 40%, rgba(239, 68, 68, 0.12) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-night::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 60% 70%, rgba(139, 92, 246, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 80% 50%, rgba(79, 70, 229, 0.06) 0%, transparent 25%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===================================
+   THEME-SPECIFIC CARD STYLES
+   =================================== */
+
+.theme-forest .bg-card,
+.theme-forest [class*="bg-card"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(26, 77, 46, 0.12) !important;
+  box-shadow: 
+    0 4px 6px rgba(26, 77, 46, 0.08),
+    0 1px 3px rgba(26, 77, 46, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+}
+
+.theme-ocean .bg-card,
+.theme-ocean [class*="bg-card"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(30, 64, 175, 0.12) !important;
+  box-shadow: 
+    0 4px 6px rgba(30, 64, 175, 0.08),
+    0 1px 3px rgba(30, 64, 175, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+}
+
+.theme-sunset .bg-card,
+.theme-sunset [class*="bg-card"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(220, 38, 38, 0.12) !important;
+  box-shadow: 
+    0 4px 6px rgba(220, 38, 38, 0.08),
+    0 1px 3px rgba(220, 38, 38, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+}
+
+.theme-night .bg-card,
+.theme-night [class*="bg-card"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(30, 58, 138, 0.12) !important;
+  box-shadow: 
+    0 4px 6px rgba(30, 58, 138, 0.08),
+    0 1px 3px rgba(30, 58, 138, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* ===================================
+   THEME-SPECIFIC BUTTON STYLES
+   =================================== */
+
+/* Forest Theme Buttons */
+.theme-forest .bg-primary,
+.theme-forest button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]) {
+  background: linear-gradient(135deg, #1a4d2e 0%, #2d5016 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(26, 77, 46, 0.3) !important;
+  box-shadow: 0 2px 4px rgba(26, 77, 46, 0.2) !important;
+}
+
+.theme-forest .bg-primary:hover,
+.theme-forest button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):hover {
+  background: linear-gradient(135deg, #2d5016 0%, #1a4d2e 100%) !important;
+  box-shadow: 0 4px 8px rgba(26, 77, 46, 0.3) !important;
+}
+
+.theme-forest .bg-secondary {
+  background: linear-gradient(135deg, #8fbc8f 0%, #4f772d 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Ocean Theme Buttons */
+.theme-ocean .bg-primary,
+.theme-ocean button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]) {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(30, 64, 175, 0.3) !important;
+  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2) !important;
+}
+
+.theme-ocean .bg-primary:hover,
+.theme-ocean button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%) !important;
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3) !important;
+}
+
+.theme-ocean .bg-secondary {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Sunset Theme Buttons */
+.theme-sunset .bg-primary,
+.theme-sunset button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]) {
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(220, 38, 38, 0.3) !important;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2) !important;
+}
+
+.theme-sunset .bg-primary:hover,
+.theme-sunset button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):hover {
+  background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%) !important;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3) !important;
+}
+
+.theme-sunset .bg-secondary {
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%) !important;
+  color: #7c2d12 !important;
+}
+
+/* Night Theme Buttons */
+.theme-night .bg-primary,
+.theme-night button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]) {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(30, 58, 138, 0.3) !important;
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2) !important;
+}
+
+.theme-night .bg-primary:hover,
+.theme-night button:not(.bg-secondary):not(.bg-destructive):not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%) !important;
+  box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3) !important;
+}
+
+.theme-night .bg-secondary {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%) !important;
+  color: #1e3a8a !important;
+}
+
+/* ===================================
+   THEME-SPECIFIC BADGE STYLES
+   =================================== */
+
+.theme-forest .bg-primary[class*="Badge"],
+.theme-forest [class*="badge"].bg-primary {
+  background: linear-gradient(135deg, #1a4d2e 0%, #2d5016 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-ocean .bg-primary[class*="Badge"],
+.theme-ocean [class*="badge"].bg-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-sunset .bg-primary[class*="Badge"],
+.theme-sunset [class*="badge"].bg-primary {
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%) !important;
+  color: #ffffff !important;
+}
+
+.theme-night .bg-primary[class*="Badge"],
+.theme-night [class*="badge"].bg-primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Badge shine animation */
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+/* Apply shine animation to badges */
+.theme-forest .bg-primary[class*="Badge"],
+.theme-forest [class*="badge"].bg-primary {
+  animation: shine 2s infinite;
+}
+
+.theme-ocean .bg-primary[class*="Badge"],
+.theme-ocean [class*="badge"].bg-primary {
+  animation: shine 2s infinite;
+}
+
+.theme-sunset .bg-primary[class*="Badge"],
+.theme-sunset [class*="badge"].bg-primary {
+  animation: shine 2s infinite;
+}
+
+.theme-night .bg-primary[class*="Badge"],
+.theme-night [class*="badge"].bg-primary {
+  animation: shine 2s infinite;
+}
+
+/* ===================================
+   THEME-SPECIFIC ACCENT COLORS
+   =================================== */
+
+.theme-forest .text-primary {
+  color: #1a4d2e !important;
+}
+
+.theme-ocean .text-primary {
+  color: #1e40af !important;
+}
+
+.theme-sunset .text-primary {
+  color: #dc2626 !important;
+}
+
+.theme-night .text-primary {
+  color: #1e3a8a !important;
+}
+
+/* ===================================
+   THEME-SPECIFIC NAVIGATION
+   =================================== */
+
+.theme-forest .navigation-bg,
+.theme-forest .menubar-enhanced {
+  background: rgba(148, 163, 184, 0.25) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-ocean .navigation-bg,
+.theme-ocean .menubar-enhanced {
+  background: rgba(148, 163, 184, 0.25) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-sunset .navigation-bg,
+.theme-sunset .menubar-enhanced {
+  background: rgba(148, 163, 184, 0.25) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-night .navigation-bg,
+.theme-night .menubar-enhanced {
+  background: rgba(148, 163, 184, 0.25) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ===================================
+   THEME-SPECIFIC HOVER STATES
+   =================================== */
+
+.theme-forest .menubar-item-hover:hover,
+.theme-forest [class*="hover:"]:hover {
+  background: rgba(26, 77, 46, 0.08) !important;
+  box-shadow: 0 2px 4px rgba(26, 77, 46, 0.15) !important;
+}
+
+.theme-ocean .menubar-item-hover:hover,
+.theme-ocean [class*="hover:"]:hover {
+  background: rgba(30, 64, 175, 0.08) !important;
+  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.15) !important;
+}
+
+.theme-sunset .menubar-item-hover:hover,
+.theme-sunset [class*="hover:"]:hover {
+  background: rgba(220, 38, 38, 0.08) !important;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15) !important;
+}
+
+.theme-night .menubar-item-hover:hover,
+.theme-night [class*="hover:"]:hover {
+  background: rgba(30, 58, 138, 0.08) !important;
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.15) !important;
+}
+
+/* ===================================
+   THEME-SPECIFIC INPUT & SELECT
+   =================================== */
+
+.theme-forest input,
+.theme-forest select,
+.theme-forest textarea {
+  border-color: rgba(26, 77, 46, 0.2) !important;
+}
+
+.theme-forest input:focus,
+.theme-forest select:focus,
+.theme-forest textarea:focus {
+  border-color: #1a4d2e !important;
+  ring-color: rgba(26, 77, 46, 0.3) !important;
+}
+
+.theme-ocean input,
+.theme-ocean select,
+.theme-ocean textarea {
+  border-color: rgba(30, 64, 175, 0.2) !important;
+}
+
+.theme-ocean input:focus,
+.theme-ocean select:focus,
+.theme-ocean textarea:focus {
+  border-color: #1e40af !important;
+  ring-color: rgba(30, 64, 175, 0.3) !important;
+}
+
+.theme-sunset input,
+.theme-sunset select,
+.theme-sunset textarea {
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+.theme-sunset input:focus,
+.theme-sunset select:focus,
+.theme-sunset textarea:focus {
+  border-color: #dc2626 !important;
+  ring-color: rgba(220, 38, 38, 0.3) !important;
+}
+
+.theme-night input,
+.theme-night select,
+.theme-night textarea {
+  border-color: rgba(30, 58, 138, 0.2) !important;
+}
+
+.theme-night input:focus,
+.theme-night select:focus,
+.theme-night textarea:focus {
+  border-color: #1e3a8a !important;
+  ring-color: rgba(30, 58, 138, 0.3) !important;
+}
+
+/* ===================================
+   THEME ANIMATIONS
+   =================================== */
+
+@keyframes forest-flow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes ocean-wave {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes sunset-drift {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes night-twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.theme-forest::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(173, 255, 47, 0.1), transparent);
+  animation: forest-flow 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-ocean::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(64, 224, 208, 0.1), transparent);
+  animation: ocean-wave 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-sunset::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1), transparent);
+  animation: sunset-drift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.theme-night::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.1), transparent);
+  animation: night-twinkle 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Theme transition animations */
+@keyframes theme-transition {
+  0% { opacity: 0; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.theme-forest,
+.theme-ocean,
+.theme-sunset,
+.theme-night {
+  animation: theme-transition 0.8s ease-in-out;
+}
+
+/* ===================================
+   SCREEN BACKGROUNDS
+   =================================== */
+
+.screen-transparent-bg {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+
+.theme-forest .home-screen,
+.theme-forest .gallery-screen,
+.theme-forest .library-screen,
+.theme-forest .store-screen,
+.theme-forest .profile-screen,
+.theme-forest .audio-settings-screen,
+.theme-forest .explore-screen,
+.theme-forest .book-settings-screen,
+.theme-forest .history-screen,
+.theme-forest .minigames-screen,
+.theme-forest .themes-screen,
+.theme-forest .account-screen {
+  background: linear-gradient(135deg, 
+    rgba(218, 255, 147, 0.03) 0%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(173, 255, 47, 0.03) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.theme-ocean .home-screen,
+.theme-ocean .gallery-screen,
+.theme-ocean .library-screen,
+.theme-ocean .store-screen,
+.theme-ocean .profile-screen,
+.theme-ocean .audio-settings-screen,
+.theme-ocean .explore-screen,
+.theme-ocean .book-settings-screen,
+.theme-ocean .history-screen,
+.theme-ocean .minigames-screen,
+.theme-ocean .themes-screen,
+.theme-ocean .account-screen {
+  background: linear-gradient(135deg, 
+    rgba(64, 224, 208, 0.03) 0%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(30, 144, 255, 0.03) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.theme-sunset .home-screen,
+.theme-sunset .gallery-screen,
+.theme-sunset .library-screen,
+.theme-sunset .store-screen,
+.theme-sunset .profile-screen,
+.theme-sunset .audio-settings-screen,
+.theme-sunset .explore-screen,
+.theme-sunset .book-settings-screen,
+.theme-sunset .history-screen,
+.theme-sunset .minigames-screen,
+.theme-sunset .themes-screen,
+.theme-sunset .account-screen {
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.03) 0%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(255, 105, 180, 0.03) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.theme-night .home-screen,
+.theme-night .gallery-screen,
+.theme-night .library-screen,
+.theme-night .store-screen,
+.theme-night .profile-screen,
+.theme-night .audio-settings-screen,
+.theme-night .explore-screen,
+.theme-night .book-settings-screen,
+.theme-night .history-screen,
+.theme-night .minigames-screen,
+.theme-night .themes-screen,
+.theme-night .account-screen {
+  background: linear-gradient(135deg, 
+    rgba(251, 191, 36, 0.03) 0%, 
+    rgba(255, 255, 255, 0.02) 50%, 
+    rgba(59, 130, 246, 0.03) 100%);
+  backdrop-filter: blur(1px);
+}
+
+/* ===================================
+   SIDEBAR & DROPDOWNS
+   =================================== */
+
+.sidebar-dropdown {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.theme-forest .sidebar-dropdown {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(26, 77, 46, 0.12) !important;
+  box-shadow: 0 8px 32px rgba(26, 77, 46, 0.15) !important;
+}
+
+.theme-ocean .sidebar-dropdown {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(30, 64, 175, 0.12) !important;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.15) !important;
+}
+
+.theme-sunset .sidebar-dropdown {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(220, 38, 38, 0.12) !important;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.15) !important;
+}
+
+.theme-night .sidebar-dropdown {
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(30, 58, 138, 0.12) !important;
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.15) !important;
+}
+
+.menubar-item-hover {
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+}
+
+.menubar-item-hover:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   CUSTOM SCROLLBARS
+   =================================== */
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*:hover {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+
+*:hover::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 6px;
+}
+
+*:hover::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark *:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark *:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+*:active {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+
+*:active::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 6px;
+}
+
+*:active::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+*:active::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.dark *:active::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.main-content:hover,
+.main-content:active {
+  scrollbar-width: thin;
+}
+
+.main-content:hover::-webkit-scrollbar,
+.main-content:active::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main-content:hover::-webkit-scrollbar-thumb,
+.main-content:active::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.main-content:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark .main-content:hover::-webkit-scrollbar-thumb,
+.dark .main-content:active::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.dark .main-content:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
+@layer base {
+  :where(:not(:has([class*=" text-"])):not(:has([class^="text-"]))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    span {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    div {
+      font-size: inherit;
+    }
+  }
+}
+
+/* Font size responsiveness */
+.font-size-small .text-xs { font-size: 0.75rem !important; }
+.font-size-small .text-sm { font-size: 0.875rem !important; }
+.font-size-small .text-base { font-size: 1rem !important; }
+.font-size-small .text-lg { font-size: 1.125rem !important; }
+.font-size-small .text-xl { font-size: 1.25rem !important; }
+.font-size-small .text-2xl { font-size: 1.5rem !important; }
+
+.font-size-medium .text-xs { font-size: 0.75rem !important; }
+.font-size-medium .text-sm { font-size: 0.875rem !important; }
+.font-size-medium .text-base { font-size: 1rem !important; }
+.font-size-medium .text-lg { font-size: 1.125rem !important; }
+.font-size-medium .text-xl { font-size: 1.25rem !important; }
+.font-size-medium .text-2xl { font-size: 1.5rem !important; }
+
+.font-size-large .text-xs { font-size: 0.8125rem !important; }
+.font-size-large .text-sm { font-size: 0.9375rem !important; }
+.font-size-large .text-base { font-size: 1.125rem !important; }
+.font-size-large .text-lg { font-size: 1.25rem !important; }
+.font-size-large .text-xl { font-size: 1.375rem !important; }
+.font-size-large .text-2xl { font-size: 1.625rem !important; }
+
+html {
+  font-size: var(--font-size);
+}
+
+.font-size-small {
+  --font-size: var(--font-size-small);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+}
+
+.font-size-medium {
+  --font-size: var(--font-size-medium);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+}
+
+.font-size-large {
+  --font-size: var(--font-size-large);
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.625rem;
+  --text-3xl: 2rem;
+}
+
+.font-size-small,
+.font-size-medium,
+.font-size-large {
+  font-size: var(--font-size);
+}
+
+.font-size-small * {
+  font-size: inherit;
+}
+
+.font-size-medium * {
+  font-size: inherit;
+}
+
+.font-size-large * {
+  font-size: inherit;
+}
+
+/* ===================================
+   MOBILE NAVIGATION SPACING
+   =================================== */
+
+/* Support for iOS safe area insets */
+:root {
+  --top-nav-height: 64px;
+  --bottom-nav-height: 68px;
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Main content spacing when navigation is present */
+.main-content.has-navigation {
+  padding-top: calc(var(--top-nav-height) + var(--safe-area-top));
+  padding-bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom));
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Enhanced Menubar positioning */
+.fixed.top-0 {
+  top: var(--safe-area-top);
+}
+
+/* Bottom Navigation positioning */
+.fixed.bottom-0 {
+  bottom: var(--safe-area-bottom);
+  padding-bottom: var(--safe-area-bottom);
+}
+
+/* Adjust for different screen sizes */
+@media (max-width: 385px) {
+  :root {
+    --top-nav-height: 56px;
+    --bottom-nav-height: 64px;
+  }
+}
+
+@media (min-height: 800px) {
+  :root {
+    --top-nav-height: 68px;
+    --bottom-nav-height: 72px;
+  }
+}
+
+/* Ensure content is scrollable without hiding behind navigation */
+.main-content.has-navigation > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent content from being hidden by navigation bars */
+.navigation-bg {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Add smooth scrolling for better mobile experience */
+.main-content {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize for mobile touch interactions */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch device optimizations */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Slightly larger tap targets for mobile */
+  .bottom-navigation button {
+    padding: 0.75rem;
+  }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  
+  <!-- App Info -->
+  <title>Rooted Tales - Interactive Children's Books</title>
+  <meta name="description" content="Magical storytelling experiences featuring red pandas and forest creatures for children and families. Interactive books with 34+ characters across mystical environments." />
+  <meta name="keywords" content="children books, interactive stories, red panda, forest animals, reading app, kids education, family stories" />
+  <meta name="author" content="Xenwinx" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="en-US" />
+  
+  <!-- App Store Meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Rooted Tales" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Rooted Tales" />
+  
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#1a4d2e" />
+  <meta name="msapplication-TileColor" content="#1a4d2e" />
+  <meta name="msapplication-navbutton-color" content="#1a4d2e" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <!-- Safe Area Support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.png" />
+  
+  <!-- Splash Screens for iOS -->
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/splash/iphone5_splash.png" />
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/splash/iphone6_splash.png" />
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/splash/iphoneplus_splash.png" />
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/splash/iphonex_splash.png" />
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="/splash/iphonexr_splash.png" />
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/splash/iphonexsmax_splash.png" />
+  
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/icons/icon-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/icons/icon-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/icons/icon-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/icons/icon-310x310.png" />
+  
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Rooted Tales - Interactive Children's Books" />
+  <meta property="og:description" content="Magical storytelling experiences featuring red pandas and forest creatures for children and families." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://rootedtales.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rooted Tales" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rooted Tales - Interactive Children's Books" />
+  <meta name="twitter:description" content="Magical storytelling experiences featuring red pandas and forest creatures for children and families." />
+  <meta name="twitter:image" content="/twitter-image.png" />
+  <meta name="twitter:site" content="@Xenwinx7" />
+  <meta name="twitter:creator" content="@Xenwinx7" />
+  
+  <!-- App Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/styles/globals.css" as="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//api.rootedtales.com" />
+  <link rel="dns-prefetch" href="//cdn.rootedtales.com" />
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  
+  <!-- Performance Hints -->
+  <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
+  
+  <!-- App-specific Meta -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Rooted Tales",
+    "description": "Interactive children's books featuring red pandas and forest creatures",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Xenwinx"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    }
+  }
+  </script>
+  
+  <!-- Critical CSS -->
+  <style>
+    /* Critical above-the-fold styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a4d2e;
+      overflow: hidden;
+    }
+    
+    #root {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+    
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a4d2e 0%, #2d5016 50%, #1a4d2e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(143, 188, 143, 0.3);
+      border-top: 3px solid #8fbc8f;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Safe area support */
+    .safe-area {
+      padding-top: env(safe-area-inset-top);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+    }
+    
+    /* Prevent zoom */
+    * {
+      touch-action: manipulation;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    input, textarea {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- Fallback loading screen for slow connections -->
+    <div class="splash-screen">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+    
+    // Install prompt handling
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      window.deferredPrompt = e;
+    });
+    
+    // App installed handling
+    window.addEventListener('appinstalled', (e) => {
+      console.log('App installed');
+      deferredPrompt = null;
+    });
+    
+    // Prevent zoom on iOS
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+    
+    // Prevent context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+    
+    // Performance monitoring
+    if (window.performance) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }, 0);
+      });
+    }
+  </script>
+  
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

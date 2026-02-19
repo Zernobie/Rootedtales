@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="256dp"
+    android:height="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+    
+    <!-- Rooted Tales Icon - Red Panda silhouette with tree -->
+    <group android:translateX="128" android:translateY="128">
+        
+        <!-- Tree trunk -->
+        <path
+            android:fillColor="#86efac"
+            android:pathData="M-8,-60 L-8,60 L8,60 L8,-60 Z" />
+        
+        <!-- Tree leaves/crown -->
+        <path
+            android:fillColor="#22c55e"
+            android:pathData="M0,-80 C-40,-80 -40,-40 -40,-40 C-40,-20 -20,0 0,0 C20,0 40,-20 40,-40 C40,-40 40,-80 0,-80 Z" />
+        
+        <!-- Red Panda silhouette -->
+        <path
+            android:fillColor="#f97316"
+            android:pathData="M-20,20 Q-25,25 -25,32 Q-25,40 -18,40 L18,40 Q25,40 25,32 Q25,25 20,20 L20,10 Q20,5 15,5 L-15,5 Q-20,5 -20,10 Z" />
+        
+        <!-- Ears -->
+        <path
+            android:fillColor="#dc2626"
+            android:pathData="M-18,5 Q-20,0 -15,0 Q-12,0 -12,5 Z M12,5 Q12,0 15,0 Q20,0 18,5 Z" />
+        
+        <!-- Sparkle effect -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M35,-50 L37,-48 L35,-46 L33,-48 Z M-35,-30 L-33,-28 L-35,-26 L-37,-28 Z" />
+    </group>
+</vector>

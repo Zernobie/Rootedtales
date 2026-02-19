@@ -1,0 +1,143 @@
+{
+  "version": "1.3.0",
+  "totalBooks": 12,
+  "exportDate": "2026-02-12",
+  "note": "Book covers should be uploaded to Supabase Storage bucket 'make-eda44699-book-covers'",
+  "bucket": "make-eda44699-book-covers",
+  "fileFormat": "JPG",
+  "recommendedSize": "600x900px",
+  "books": [
+    {
+      "id": "1",
+      "title": "Akai's Forest Adventure",
+      "coverFileName": "1.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Adventure",
+      "description": "Follow Rusty the Red Panda through the mystical forest",
+      "pages": 24,
+      "characters": ["1", "2", "7"],
+      "readingTime": "10 min"
+    },
+    {
+      "id": "2",
+      "title": "Quinn's Happy Day",
+      "coverFileName": "2.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Friendship",
+      "description": "Quinn the Quokka spreads joy throughout the forest",
+      "pages": 20,
+      "characters": ["2", "3", "4"],
+      "readingTime": "8 min"
+    },
+    {
+      "id": "3",
+      "title": "The Great Forest Race",
+      "coverFileName": "3.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Adventure",
+      "description": "All the forest friends compete in an exciting race",
+      "pages": 28,
+      "characters": ["1", "2", "5", "7", "9"],
+      "readingTime": "12 min"
+    },
+    {
+      "id": "4",
+      "title": "Ocean Dreams",
+      "coverFileName": "4.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Fantasy",
+      "description": "Raiku discovers the wonders beneath the waves",
+      "pages": 26,
+      "characters": ["14", "16", "17", "18"],
+      "readingTime": "11 min"
+    },
+    {
+      "id": "5",
+      "title": "Mountain Mysteries",
+      "coverFileName": "5.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Mystery",
+      "description": "Raine climbs to uncover ancient mountain secrets",
+      "pages": 30,
+      "characters": ["24", "25", "28", "29"],
+      "readingTime": "13 min"
+    },
+    {
+      "id": "6",
+      "title": "Desert Tales",
+      "coverFileName": "6.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Adventure",
+      "description": "Daichi navigates the shifting sands",
+      "pages": 22,
+      "characters": ["32", "33", "34"],
+      "readingTime": "9 min"
+    },
+    {
+      "id": "7",
+      "title": "Hedge's Big Discovery",
+      "coverFileName": "7.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Learning",
+      "description": "A curious hedgehog learns about the forest ecosystem",
+      "pages": 18,
+      "characters": ["4", "6", "10"],
+      "readingTime": "7 min"
+    },
+    {
+      "id": "8",
+      "title": "Maru Takes Flight",
+      "coverFileName": "8.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Courage",
+      "description": "A flying squirrel overcomes fear of heights",
+      "pages": 20,
+      "characters": ["5", "8"],
+      "readingTime": "8 min"
+    },
+    {
+      "id": "9",
+      "title": "Strix's Night Watch",
+      "coverFileName": "9.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Wisdom",
+      "description": "The wise owl protects the forest at night",
+      "pages": 24,
+      "characters": ["10", "11", "13"],
+      "readingTime": "10 min"
+    },
+    {
+      "id": "10",
+      "title": "Kaito's Ocean Journey",
+      "coverFileName": "10.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Exploration",
+      "description": "A dolphin explores the vast ocean depths",
+      "pages": 26,
+      "characters": ["16", "17", "19", "20"],
+      "readingTime": "11 min"
+    },
+    {
+      "id": "11",
+      "title": "The Four Habitats",
+      "coverFileName": "11.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Education",
+      "description": "Learn about forest, ocean, mountain, and desert habitats",
+      "pages": 32,
+      "characters": ["1", "14", "24", "32"],
+      "readingTime": "14 min"
+    },
+    {
+      "id": "12",
+      "title": "Friends Forever",
+      "coverFileName": "12.jpg",
+      "author": "Xenwinx Studio",
+      "category": "Friendship",
+      "description": "The power of friendship across all habitats",
+      "pages": 28,
+      "characters": ["1", "2", "14", "16", "24", "32"],
+      "readingTime": "12 min"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.xenwinx.rootedtales'
+    compileSdk 34
+    
+    defaultConfig {
+        applicationId "com.xenwinx.rootedtales"
+        minSdk 23  // Android 6.0 - Wide compatibility
+        targetSdk 34  // Latest Android 14
+        versionCode 1
+        versionName "1.0.0"
+        
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Enable vector drawables
+        vectorDrawables.useSupportLibrary = true
+        
+        // Multidex support for apps with many dependencies
+        multiDexEnabled true
+        
+        // Manifest placeholders
+        manifestPlaceholders = [
+            appAuthRedirectScheme: 'com.xenwinx.rootedtales'
+        ]
+        
+        // BuildConfig fields
+        buildConfigField "String", "SUPPORT_EMAIL", '"hub@xenwinx.com"'
+        buildConfigField "String", "APP_URL", '"https://rootedtales.app"'
+        buildConfigField "String", "API_URL", '"https://api.rootedtales.app"'
+        buildConfigField "int", "DATABASE_VERSION", "1"
+    }
+
+    // ============================================
+    // SIGNING CONFIGURATIONS
+    // ============================================
+    signingConfigs {
+        release {
+            // Configure in gradle.properties or keystore.properties
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+        
+        debug {
+            // Debug uses default Android debug keystore
+            storeFile file('../debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    // ============================================
+    // BUILD TYPES
+    // ============================================
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            
+            // Debug build config fields
+            buildConfigField "boolean", "DEBUG_MODE", "true"
+            buildConfigField "boolean", "ENABLE_LOGGING", "true"
+        }
+        
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            
+            // Release build config fields
+            buildConfigField "boolean", "DEBUG_MODE", "false"
+            buildConfigField "boolean", "ENABLE_LOGGING", "false"
+            
+            // Enable optimization
+            crunchPngs true
+        }
+    }
+
+    // ============================================
+    // COMPILE OPTIONS
+    // ============================================
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    // ============================================
+    // BUILD FEATURES
+    // ============================================
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+        dataBinding = false
+    }
+
+    // ============================================
+    // PACKAGING OPTIONS
+    // ============================================
+    packagingOptions {
+        resources {
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/license.txt',
+                'META-INF/NOTICE',
+                'META-INF/NOTICE.txt',
+                'META-INF/notice.txt',
+                'META-INF/ASL2.0',
+                'META-INF/*.kotlin_module',
+                'META-INF/INDEX.LIST',
+                'META-INF/io.netty.versions.properties'
+            ]
+        }
+    }
+
+    // ============================================
+    // LINT OPTIONS
+    // ============================================
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation', 'ExtraTranslation'
+        warningsAsErrors false
+        informational 'StopShip'
+    }
+
+    // ============================================
+    // FLAVOR DIMENSIONS (Optional - for multiple app variants)
+    // ============================================
+    // flavorDimensions "version"
+    // productFlavors {
+    //     free {
+    //         dimension "version"
+    //         applicationIdSuffix ".free"
+    //         versionNameSuffix "-free"
+    //     }
+    //     premium {
+    //         dimension "version"
+    //         applicationIdSuffix ".premium"
+    //         versionNameSuffix "-premium"
+    //     }
+    // }
+}
+
+// ============================================
+// DEPENDENCIES
+// ============================================
+dependencies {
+    // ============================================
+    // CAPACITOR
+    // ============================================
+    implementation project(':capacitor-android')
+    implementation project(':capacitor-cordova-android-plugins')
+
+    // ============================================
+    // ANDROIDX CORE LIBRARIES
+    // ============================================
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    
+    // WebView
+    implementation 'androidx.webkit:webkit:1.9.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    
+    // Material Design
+    implementation 'com.google.android.material:material:1.11.0'
+    
+    // Splash Screen (Android 12+)
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    // ============================================
+    // LIFECYCLE COMPONENTS
+    // ============================================
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.7.0'
+
+    // ============================================
+    // COROUTINES
+    // ============================================
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+
+    // ============================================
+    // WORK MANAGER (Background Tasks)
+    // ============================================
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+
+    // ============================================
+    // ROOM DATABASE (Local Storage)
+    // ============================================
+    def room_version = "2.6.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // ============================================
+    // DATASTORE (Preferences)
+    // ============================================
+    implementation 'androidx.datastore:datastore-preferences:1.0.0'
+
+    // ============================================
+    // NETWORKING (OkHttp, Retrofit)
+    // ============================================
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // ============================================
+    // JSON PARSING
+    // ============================================
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // ============================================
+    // IMAGE LOADING (Glide)
+    // ============================================
+    def glide_version = "4.16.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // ============================================
+    // MEDIA PLAYER (ExoPlayer for Audio/Video)
+    // ============================================
+    def media3_version = "1.2.1"
+    implementation "androidx.media3:media3-exoplayer:$media3_version"
+    implementation "androidx.media3:media3-ui:$media3_version"
+    implementation "androidx.media3:media3-common:$media3_version"
+
+    // ============================================
+    // GOOGLE PLAY SERVICES
+    // ============================================
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    
+    // Google Play Billing (In-App Purchases)
+    def billing_version = "6.1.0"
+    implementation "com.android.billingclient:billing:$billing_version"
+    implementation "com.android.billingclient:billing-ktx:$billing_version"
+
+    // ============================================
+    // EPUB READER LIBRARY
+    // ============================================
+    implementation 'nl.siegmann.epublib:epublib-core:4.0'
+    // Exclude conflicting dependencies
+    configurations.all {
+        exclude group: 'org.slf4j'
+        exclude group: 'xmlpull'
+    }
+
+    // ============================================
+    // PDF VIEWER
+    // ============================================
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+
+    // ============================================
+    // FILE COMPRESSION (ZIP)
+    // ============================================
+    implementation 'net.lingala.zip4j:zip4j:2.11.5'
+
+    // ============================================
+    // MULTIDEX
+    // ============================================
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // ============================================
+    // FIREBASE (Optional - Uncomment if using)
+    // ============================================
+    // Firebase BOM (Bill of Materials)
+    // implementation platform('com.google.firebase:firebase-bom:32.7.1')
+    // implementation 'com.google.firebase:firebase-analytics-ktx'
+    // implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    // implementation 'com.google.firebase:firebase-auth-ktx'
+    // implementation 'com.google.firebase:firebase-firestore-ktx'
+    // implementation 'com.google.firebase:firebase-storage-ktx'
+    // implementation 'com.google.firebase:firebase-messaging-ktx'
+    // implementation 'com.google.firebase:firebase-config-ktx'
+    // implementation 'com.google.firebase:firebase-perf-ktx'
+
+    // ============================================
+    // SECURITY & ENCRYPTION
+    // ============================================
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+
+    // ============================================
+    // PERMISSIONS (Dexter)
+    // ============================================
+    implementation 'com.karumi:dexter:6.2.3'
+
+    // ============================================
+    // DEPENDENCY INJECTION (Optional - Hilt/Dagger)
+    // ============================================
+    // def hilt_version = "2.48"
+    // implementation "com.google.dagger:hilt-android:$hilt_version"
+    // kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // ============================================
+    // TIMBER (Logging)
+    // ============================================
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // ============================================
+    // LOTTIE ANIMATIONS
+    // ============================================
+    implementation 'com.airbnb.android:lottie:6.3.0'
+
+    // ============================================
+    // KOTLIN SERIALIZATION (Alternative to Gson)
+    // ============================================
+    // implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2'
+
+    // ============================================
+    // TESTING
+    // ============================================
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.8.0'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+    
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+}
+
+// ============================================
+// APPLY GOOGLE SERVICES PLUGIN (if using Firebase)
+// ============================================
+// apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.firebase.crashlytics'

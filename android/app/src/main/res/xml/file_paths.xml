@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ============================================ -->
+    <!-- FILE PROVIDER PATHS CONFIGURATION -->
+    <!-- Defines which directories can be shared via FileProvider -->
+    <!-- ============================================ -->
+    
+    <!-- Internal storage files directory -->
+    <files-path 
+        name="files" 
+        path="." />
+    
+    <!-- Downloaded ebooks directory -->
+    <files-path 
+        name="books" 
+        path="downloaded_books/" />
+    
+    <!-- Book covers directory -->
+    <files-path 
+        name="covers" 
+        path="book_covers/" />
+    
+    <!-- Cache directory (temporary files) -->
+    <cache-path 
+        name="cache" 
+        path="." />
+    
+    <!-- External files directory (if app uses external storage) -->
+    <external-files-path 
+        name="external_files" 
+        path="." />
+    
+    <!-- External cache directory -->
+    <external-cache-path 
+        name="external_cache" 
+        path="." />
+    
+    <!-- Shared storage (Android 10+) -->
+    <external-path 
+        name="external_storage" 
+        path="." />
+    
+    <!-- Root directory (use cautiously) -->
+    <!-- <root-path name="root" path="." /> -->
+</paths>

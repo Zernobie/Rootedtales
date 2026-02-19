@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- PRIMARY COLORS (Forest Theme - Default) -->
+    <!-- ============================================ -->
+    <color name="colorPrimary">#4ade80</color>
+    <color name="colorPrimaryDark">#1a2f1a</color>
+    <color name="colorPrimaryLight">#86efac</color>
+    <color name="colorAccent">#fbbf24</color>
+    
+    <!-- ============================================ -->
+    <!-- THEME COLORS -->
+    <!-- ============================================ -->
+    <!-- Forest Theme -->
+    <color name="forest_primary">#4ade80</color>
+    <color name="forest_dark">#1a2f1a</color>
+    <color name="forest_light">#dcfce7</color>
+    <color name="forest_accent">#fbbf24</color>
+    
+    <!-- Ocean Theme -->
+    <color name="ocean_primary">#06b6d4</color>
+    <color name="ocean_dark">#164e63</color>
+    <color name="ocean_light">#cffafe</color>
+    <color name="ocean_accent">#f0abfc</color>
+    
+    <!-- Sunset Theme -->
+    <color name="sunset_primary">#f97316</color>
+    <color name="sunset_dark">#7c2d12</color>
+    <color name="sunset_light">#fed7aa</color>
+    <color name="sunset_accent">#fbbf24</color>
+    
+    <!-- Night Theme -->
+    <color name="night_primary">#8b5cf6</color>
+    <color name="night_dark">#1e1b4b</color>
+    <color name="night_light">#ddd6fe</color>
+    <color name="night_accent">#fcd34d</color>
+    
+    <!-- ============================================ -->
+    <!-- BACKGROUND COLORS -->
+    <!-- ============================================ -->
+    <color name="backgroundColor">#ffffff</color>
+    <color name="backgroundDark">#0f1f0f</color>
+    <color name="backgroundGray">#f9fafb</color>
+    <color name="backgroundCard">#ffffff</color>
+    
+    <!-- ============================================ -->
+    <!-- TEXT COLORS -->
+    <!-- ============================================ -->
+    <color name="textPrimary">#1a1a1a</color>
+    <color name="textSecondary">#6b7280</color>
+    <color name="textTertiary">#9ca3af</color>
+    <color name="textLight">#ffffff</color>
+    <color name="textDisabled">#d1d5db</color>
+    
+    <!-- ============================================ -->
+    <!-- STATUS BAR & NAVIGATION BAR -->
+    <!-- ============================================ -->
+    <color name="statusBarColor">#1a2f1a</color>
+    <color name="navigationBarColor">#ffffff</color>
+    <color name="navigationBarDark">#1a1a1a</color>
+    
+    <!-- ============================================ -->
+    <!-- UI ELEMENT COLORS -->
+    <!-- ============================================ -->
+    <color name="divider">#e5e7eb</color>
+    <color name="border">#d1d5db</color>
+    <color name="overlay">#80000000</color>
+    <color name="overlayLight">#40000000</color>
+    <color name="shadow">#1a000000</color>
+    
+    <!-- ============================================ -->
+    <!-- SEMANTIC COLORS -->
+    <!-- ============================================ -->
+    <!-- Success -->
+    <color name="success">#10b981</color>
+    <color name="successDark">#065f46</color>
+    <color name="successLight">#d1fae5</color>
+    
+    <!-- Error / Danger -->
+    <color name="error">#ef4444</color>
+    <color name="errorDark">#991b1b</color>
+    <color name="errorLight">#fee2e2</color>
+    
+    <!-- Warning -->
+    <color name="warning">#f59e0b</color>
+    <color name="warningDark">#92400e</color>
+    <color name="warningLight">#fef3c7</color>
+    
+    <!-- Info -->
+    <color name="info">#3b82f6</color>
+    <color name="infoDark">#1e3a8a</color>
+    <color name="infoLight">#dbeafe</color>
+    
+    <!-- ============================================ -->
+    <!-- BUTTON COLORS -->
+    <!-- ============================================ -->
+    <color name="buttonPrimary">#4ade80</color>
+    <color name="buttonPrimaryPressed">#22c55e</color>
+    <color name="buttonPrimaryDisabled">#a7f3d0</color>
+    
+    <color name="buttonSecondary">#6b7280</color>
+    <color name="buttonSecondaryPressed">#4b5563</color>
+    <color name="buttonSecondaryDisabled">#d1d5db</color>
+    
+    <!-- ============================================ -->
+    <!-- RATING COLORS -->
+    <!-- ============================================ -->
+    <color name="starFilled">#fbbf24</color>
+    <color name="starEmpty">#d1d5db</color>
+    
+    <!-- ============================================ -->
+    <!-- BADGE COLORS -->
+    <!-- ============================================ -->
+    <color name="badgeGold">#fbbf24</color>
+    <color name="badgeSilver">#9ca3af</color>
+    <color name="badgeBronze">#d97706</color>
+    <color name="badgePlatinum">#818cf8</color>
+    
+    <!-- ============================================ -->
+    <!-- PROGRESS COLORS -->
+    <!-- ============================================ -->
+    <color name="progressBackground">#e5e7eb</color>
+    <color name="progressForeground">#4ade80</color>
+    
+    <!-- ============================================ -->
+    <!-- TRANSPARENT COLORS -->
+    <!-- ============================================ -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    
+    <!-- Black with opacity -->
+    <color name="black_10">#1a000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_30">#4d000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_70">#b3000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="black_90">#e6000000</color>
+    
+    <!-- White with opacity -->
+    <color name="white_10">#1affffff</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="white_30">#4dffffff</color>
+    <color name="white_40">#66ffffff</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="white_70">#b3ffffff</color>
+    <color name="white_80">#ccffffff</color>
+    <color name="white_90">#e6ffffff</color>
+    
+    <!-- ============================================ -->
+    <!-- RIPPLE EFFECT COLORS -->
+    <!-- ============================================ -->
+    <color name="ripple">#40000000</color>
+    <color name="rippleLight">#20000000</color>
+</resources>

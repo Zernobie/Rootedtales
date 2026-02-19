@@ -1,0 +1,283 @@
+{
+  "version": "1.3.0",
+  "totalCharacters": 34,
+  "exportDate": "2026-02-12",
+  "note": "Character images should be uploaded to Supabase Storage bucket 'make-eda44699-characters'",
+  "bucket": "make-eda44699-characters",
+  "fileFormat": "PNG",
+  "recommendedSize": "800x800px",
+  "characters": [
+    {
+      "id": "1",
+      "name": "Akai",
+      "fileName": "1.png",
+      "category": "forest",
+      "animalType": "Red Panda",
+      "description": "The brave leader of the forest"
+    },
+    {
+      "id": "2",
+      "name": "Quinn",
+      "fileName": "2.png",
+      "category": "forest",
+      "animalType": "Quokka",
+      "description": "The happy helper"
+    },
+    {
+      "id": "3",
+      "name": "Koa",
+      "fileName": "3.png",
+      "category": "forest",
+      "animalType": "Koala",
+      "description": "The sleepy climber"
+    },
+    {
+      "id": "4",
+      "name": "Hedge",
+      "fileName": "4.png",
+      "category": "forest",
+      "animalType": "Hedgehog",
+      "description": "The spiky explorer"
+    },
+    {
+      "id": "5",
+      "name": "Maru",
+      "fileName": "5.png",
+      "category": "forest",
+      "animalType": "Flying Squirrel",
+      "description": "The gliding acrobat"
+    },
+    {
+      "id": "6",
+      "name": "Orin",
+      "fileName": "6.png",
+      "category": "forest",
+      "animalType": "Otter",
+      "description": "The playful swimmer"
+    },
+    {
+      "id": "7",
+      "name": "Niko",
+      "fileName": "7.png",
+      "category": "forest",
+      "animalType": "Red Fox",
+      "description": "The clever trickster"
+    },
+    {
+      "id": "8",
+      "name": "Aoi",
+      "fileName": "8.png",
+      "category": "forest",
+      "animalType": "Blue Jay",
+      "description": "The singing messenger"
+    },
+    {
+      "id": "9",
+      "name": "Basilisk",
+      "fileName": "9.png",
+      "category": "forest",
+      "animalType": "Basilisk Lizard",
+      "description": "The water walker"
+    },
+    {
+      "id": "10",
+      "name": "Strix",
+      "fileName": "10.png",
+      "category": "forest",
+      "animalType": "Owl",
+      "description": "The wise night watcher"
+    },
+    {
+      "id": "11",
+      "name": "Snowflake",
+      "fileName": "11.png",
+      "category": "forest",
+      "animalType": "Arctic Fox",
+      "description": "The winter wanderer"
+    },
+    {
+      "id": "12",
+      "name": "Calico",
+      "fileName": "12.png",
+      "category": "forest",
+      "animalType": "Cat",
+      "description": "The curious companion"
+    },
+    {
+      "id": "13",
+      "name": "Thorne",
+      "fileName": "13.png",
+      "category": "forest",
+      "animalType": "Porcupine",
+      "description": "The protective guardian"
+    },
+    {
+      "id": "14",
+      "name": "Raiku",
+      "fileName": "14.png",
+      "category": "ocean",
+      "animalType": "Sea Otter",
+      "description": "The ocean explorer"
+    },
+    {
+      "id": "15",
+      "name": "Ellie",
+      "fileName": "15.png",
+      "category": "ocean",
+      "animalType": "Elephant Seal",
+      "description": "The gentle giant"
+    },
+    {
+      "id": "16",
+      "name": "Kaito",
+      "fileName": "16.png",
+      "category": "ocean",
+      "animalType": "Dolphin",
+      "description": "The playful jumper"
+    },
+    {
+      "id": "17",
+      "name": "Mizuto",
+      "fileName": "17.png",
+      "category": "ocean",
+      "animalType": "Sea Turtle",
+      "description": "The ancient voyager"
+    },
+    {
+      "id": "18",
+      "name": "Lumi",
+      "fileName": "18.png",
+      "category": "ocean",
+      "animalType": "Jellyfish",
+      "description": "The glowing drifter"
+    },
+    {
+      "id": "19",
+      "name": "Calyx",
+      "fileName": "19.png",
+      "category": "ocean",
+      "animalType": "Seahorse",
+      "description": "The graceful dancer"
+    },
+    {
+      "id": "20",
+      "name": "Sage",
+      "fileName": "20.png",
+      "category": "ocean",
+      "animalType": "Octopus",
+      "description": "The intelligent shape-shifter"
+    },
+    {
+      "id": "21",
+      "name": "Kai",
+      "fileName": "21.png",
+      "category": "ocean",
+      "animalType": "Manta Ray",
+      "description": "The elegant glider"
+    },
+    {
+      "id": "22",
+      "name": "Willow",
+      "fileName": "22.png",
+      "category": "ocean",
+      "animalType": "Sea Dragon",
+      "description": "The mystical guardian"
+    },
+    {
+      "id": "23",
+      "name": "Nami",
+      "fileName": "23.png",
+      "category": "ocean",
+      "animalType": "Starfish",
+      "description": "The colorful wanderer"
+    },
+    {
+      "id": "24",
+      "name": "Raine",
+      "fileName": "24.png",
+      "category": "mountain",
+      "animalType": "Snow Leopard",
+      "description": "The mountain climber"
+    },
+    {
+      "id": "25",
+      "name": "Amaruq",
+      "fileName": "25.png",
+      "category": "mountain",
+      "animalType": "Gray Wolf",
+      "description": "The pack leader"
+    },
+    {
+      "id": "26",
+      "name": "Isen",
+      "fileName": "26.png",
+      "category": "mountain",
+      "animalType": "Mountain Goat",
+      "description": "The sure-footed climber"
+    },
+    {
+      "id": "27",
+      "name": "Kazan",
+      "fileName": "27.png",
+      "category": "mountain",
+      "animalType": "Yak",
+      "description": "The strong carrier"
+    },
+    {
+      "id": "28",
+      "name": "Nyra",
+      "fileName": "28.png",
+      "category": "mountain",
+      "animalType": "Eagle",
+      "description": "The soaring hunter"
+    },
+    {
+      "id": "29",
+      "name": "Tatsu",
+      "fileName": "29.png",
+      "category": "mountain",
+      "animalType": "Dragon",
+      "description": "The mythical protector"
+    },
+    {
+      "id": "30",
+      "name": "Frost",
+      "fileName": "30.png",
+      "category": "mountain",
+      "animalType": "Polar Bear",
+      "description": "The ice wanderer"
+    },
+    {
+      "id": "31",
+      "name": "Arctic",
+      "fileName": "31.png",
+      "category": "mountain",
+      "animalType": "Arctic Hare",
+      "description": "The swift runner"
+    },
+    {
+      "id": "32",
+      "name": "Daichi",
+      "fileName": "32.png",
+      "category": "desert",
+      "animalType": "Fennec Fox",
+      "description": "The desert scout"
+    },
+    {
+      "id": "33",
+      "name": "Blaze",
+      "fileName": "33.png",
+      "category": "desert",
+      "animalType": "Phoenix",
+      "description": "The fire bird"
+    },
+    {
+      "id": "34",
+      "name": "Rajin",
+      "fileName": "34.png",
+      "category": "desert",
+      "animalType": "Camel",
+      "description": "The desert traveler"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "appId": "com.xenwinx.rootedtales",
+  "appName": "Rooted Tales",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#1a472a",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "androidSpinnerStyle": "large",
+      "spinnerColor": "#22c55e"
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#1a472a"
+    },
+    "Keyboard": {
+      "resize": "native",
+      "style": "DARK",
+      "resizeOnFullScreen": true
+    },
+    "Haptics": {
+      "enabled": true
+    },
+    "App": {
+      "backgroundColor": "#1a472a"
+    }
+  },
+  "server": {
+    "androidScheme": "https",
+    "hostname": "rootedtales.app",
+    "iosScheme": "capacitor"
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "release-key.keystore",
+      "keystoreAlias": "rootedtales-key"
+    },
+    "backgroundColor": "#1a472a",
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}
