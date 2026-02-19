@@ -80,11 +80,11 @@
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-react-swc": "^3.10.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
@@ -104,13 +104,13 @@
   ],
   "author": "Xenwinx",
   "license": "MIT",
-  "homepage": "https://github.com/your-username/rooted-tales",
+  "homepage": "https://github.com/Zernobie/Rootedtales",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/rooted-tales.git"
+    "url": "git+https://github.com/Zernobie/Rootedtales.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/rooted-tales/issues"
+    "url": "https://github.com/Zernobie/Rootedtales/issues"
   },
   "engines": {
     "node": ">=18.0.0",

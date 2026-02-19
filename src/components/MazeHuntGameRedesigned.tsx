@@ -1,6 +1,6 @@
 // Maze Hunt Game Component - Completely Redesigned
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion';
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';

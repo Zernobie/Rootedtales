@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion';
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Input } from './ui/input';

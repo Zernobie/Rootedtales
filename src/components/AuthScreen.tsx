@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';

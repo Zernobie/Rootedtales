@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { BookOpen, Sparkles, Users, Crown, Trophy, Coins, Play, Lock, LogIn, UserPlus, ChevronLeft, ChevronRight } from 'lucide-react';

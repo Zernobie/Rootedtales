@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Heart, Home } from 'lucide-react';

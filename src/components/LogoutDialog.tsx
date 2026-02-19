@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion';
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { 

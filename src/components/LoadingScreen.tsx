@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import mysticalForestBg from 'figma:asset/de4eff0107ece6776a39e487469a8b154a1d5edc.png';
 
 interface LoadingScreenProps {

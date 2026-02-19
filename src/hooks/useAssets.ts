@@ -1,11 +1,14 @@
 /**
  * React Hooks for Asset Management - Rooted Tales
- * 
+ *
  * Provides React hooks for loading and managing assets from Supabase
  * with automatic caching and fallback support.
+ *
+ * Place this file at: src/hooks/useAssets.ts
  */
 
 import { useState, useEffect, useCallback } from 'react';
+import { supabase } from '../lib/supabaseClient'; // adjust path if needed
 import {
   loadImage,
   loadBookCover,
@@ -17,6 +20,104 @@ import {
   type AssetBucket,
   type AudioType,
 } from '../lib/assetManager';
+
+// ============================================================================
+// DATA HOOKS (Characters & Books)
+// ============================================================================
+
+/**
+ * Hook for fetching all characters
+ */
+export function useCharacters() {
+  const [characters, setCharacters] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function fetchCharacters() {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const { data, error } = await supabase
+          .from('characters')
+          .select('*')
+          .order('id');
+
+        if (error) throw error;
+
+        if (isMounted) {
+          setCharacters(data || []);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err instanceof Error ? err : new Error('Failed to fetch characters'));
+        }
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+
+    fetchCharacters();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  return { characters, loading, error };
+}
+
+/**
+ * Hook for fetching all books
+ */
+export function useBooks() {
+  const [books, setBooks] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function fetchBooks() {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const { data, error } = await supabase
+          .from('books')
+          .select('*')
+          .order('id');
+
+        if (error) throw error;
+
+        if (isMounted) {
+          setBooks(data || []);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err instanceof Error ? err : new Error('Failed to fetch books'));
+        }
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+
+    fetchBooks();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  return { books, loading, error };
+}
+
+// ============================================================================
+// ASSET HOOKS (existing, unchanged)
+// ============================================================================
 
 /**
  * Hook for loading a single image asset
@@ -38,7 +139,7 @@ export function useImage(
         setIsLoading(true);
         setError(null);
         const url = await loadImage(bucket, fileName, fallbackSrc);
-        
+
         if (isMounted) {
           setImageUrl(url);
           setIsLoading(false);
@@ -77,7 +178,7 @@ export function useBookCover(bookId: string, fallbackSrc?: string) {
         setIsLoading(true);
         setError(null);
         const url = await loadBookCover(bookId, fallbackSrc);
-        
+
         if (isMounted) {
           setCoverUrl(url);
           setIsLoading(false);
@@ -116,7 +217,7 @@ export function useCharacterImage(characterId: string, fallbackSrc?: string) {
         setIsLoading(true);
         setError(null);
         const url = await loadCharacterImage(characterId, fallbackSrc);
-        
+
         if (isMounted) {
           setImageUrl(url);
           setIsLoading(false);
@@ -159,7 +260,7 @@ export function useAudio(
         setIsLoading(true);
         setError(null);
         const url = await loadAudio(type, fileName, fallbackSrc);
-        
+
         if (isMounted) {
           setAudioUrl(url);
           setIsLoading(false);
@@ -206,7 +307,7 @@ export function usePreloadAssets(
         setIsLoading(true);
         setError(null);
         await preloadAssets(assets);
-        
+
         if (isMounted) {
           setIsLoading(false);
         }
@@ -244,16 +345,11 @@ export function useAssetCache() {
   }, []);
 
   useEffect(() => {
-    // Refresh stats periodically
     const interval = setInterval(refresh, 5000);
     return () => clearInterval(interval);
   }, [refresh]);
 
-  return {
-    stats,
-    refresh,
-    clear,
-  };
+  return { stats, refresh, clear };
 }
 
 /**
@@ -284,7 +380,7 @@ export function useImages(
         });
 
         const results = await Promise.all(promises);
-        
+
         if (isMounted) {
           const urlMap = new Map<string, string>();
           results.forEach(({ key, url }) => {

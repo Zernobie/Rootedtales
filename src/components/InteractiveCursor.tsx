@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion';
+import { motion, AnimatePresence } from "framer-motion";
 import pandaCursor from 'figma:asset/cb3112923ab3b58270606fcfe8d0441c892afca9.png';
 
 interface InteractiveCursorProps {

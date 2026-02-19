@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import { Button } from './ui/button';
 import mysticalForestBg from 'figma:asset/717c220a8f29233ad802c7377356435aee8dcc2b.png';
 import xenwinxLogo from 'figma:asset/ca5fe9e99365a585292083e6acfcbb0395244023.png';

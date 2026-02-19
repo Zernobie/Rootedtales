@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion';
+import { motion } from "framer-motion";
 import { Badge } from './ui/badge';
 import { getThemeUserInfo } from '../utils/themeUtils';
 import { Theme } from '../App';
